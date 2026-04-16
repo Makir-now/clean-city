@@ -1,0 +1,4 @@
+sampah.pem
+*.pem
+venv/
+__pycache__/
