@@ -1,0 +1,18 @@
+<h2>Lapor Sampah</h2>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    Lokasi: <input type="text" name="lokasi"><br>
+    Deskripsi: <input type="text" name="deskripsi"><br>
+    Foto: <input type="file" name="file"><br>
+    <button type="submit">Kirim</button>
+</form>
+
+<h2>Daftar Laporan</h2>
+{% for d in data %}
+<p>
+Lokasi: {{ d[1] }} <br>
+Deskripsi: {{ d[2] }} <br>
+<img src="{{ d[3] }}" width="150"><br>
+Status: {{ d[4] }}
+</p>
+<hr>
+{% endfor %}
